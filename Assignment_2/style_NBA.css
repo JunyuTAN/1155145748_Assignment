@@ -1,0 +1,23 @@
+BODY {
+    color: seashell;
+  
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: left;
+    margin: 0 auto;
+
+}
+
+.banner {
+    background-image: url(banner2.jpg);
+    padding-top: 10em;
+    padding-bottom: 10em;
+    width: 1440;
+    height: 600;
+    text-align: left;
+    padding-left: 4em;
+}
+
+
+
+
+
