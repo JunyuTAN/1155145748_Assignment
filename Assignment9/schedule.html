@@ -1,0 +1,181 @@
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>LiveOnCBA</title>
+        <!--navbar-->
+        <link rel="stylesheet" href="css/style_navbar.css" />
+        <script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+        <!--instruction-->
+        <link href="css/style_instruction.css" rel="stylesheet" type="text/css"/>
+        <!--latestnews-->
+        <link rel="stylesheet" type="text/css" href="css/style_schedule.css">
+        <script src="js/jquery_latestnews.min.js"></script>
+         <!--team gallery-->
+       
+    </head>
+
+    <body>
+        <div id="wrapper">
+
+			<div id="nav-header">
+				<div class="header">
+					<h1>
+						<a href="javascript:;" class="logo">
+							<img src="images/logo.png" width="100"/>
+						</a>
+					</h1>
+					<nav style="width:490px;">
+						<ul>
+							<li>
+								<a href="index.html" class="home">首页</a>
+							</li>
+							<li class="careerpath">
+								<a href="introduction.html">数据介绍</a><i class="slide-icon"></i>
+								<div class="zhiye-submenu slide-submeu">
+									<a href="introduction.html"></i>球员位置</a>
+									<a href="introduction.html">常规数据</a>	
+									<a href="introduction.html">得分数据</a>
+									<a href="introduction.html">效率数据</a>
+									<a href="introduction.html">表现数据</a>
+								</div>
+							</li>
+							<li>
+								<a href="schedule.html">赛程</a><i class="slide-icon"></i>
+								<div class="slide-submeu">
+									<a href="schedule.html">赛果</a>
+									<a href="schedule.html">赛程</a>
+									<a href="schedule.html">球队排行榜</a>
+								</div>
+							</li>
+							<li>
+								<a href="team_gallery.html">球队</a><i class="slide-icon"></i>
+								<div class="slide-submeu qy-box">
+									<a href="javascript:;">北京紫禁勇士 </a>
+									<a href="javascript:;">北京首钢</a>
+									<a href="javascript:;">福建豹发力</a>
+									<a href="javascript:;">广东东莞大益</a>
+									<a href="javascript:;">九台农商银行</a>
+									<a href="javascript:;">辽宁本钢</a>
+									<a href="javascript:;">南京同曦宙光</a>
+									<a href="javascript:;">青岛国信海天</a>
+									<a href="javascript:;">山东西王</a>
+									<a href="javascript:;">山西汾酒股份</a>
+									<a href="javascript:;">上海久事</a>
+									<a href="javascript:;">深圳马可波罗</a>
+									<a href="javascript:;">时代中国广州</a>
+									<a href="javascript:;">四川五粮金樽</a>
+									<a href="javascript:;">苏州肯帝亚</a>
+									<a href="javascript:;">天津先行者</a>
+									<a href="javascript:;">新疆伊力特</a>
+									<a href="javascript:;">浙江稠州金租</a>
+									<a href="javascript:;">浙江广厦控股</a>
+								</div>
+							</li>
+							<li>
+								<a href="statistics.html">统计</a><i class="slide-icon"></i>
+								<div class="slide-submeu">
+									<a href="statistics.html">场均数据</a>
+									<a href="statistics.html">得分</a>
+									<a href="statistics.html">篮板</a>
+									<a href="statistics.html">效率</a>
+									<a href="statistics.html">比率</a>
+									<a href="statistics.html">犯规</a>
+									<a href="statistics.html">表现</a>
+								</div>
+
+							</li>
+						</ul>
+					</nav>
+					<div class="search">
+						<input class="searchinput" id="searchinput" placeholder="搜索球队、球员" />
+						<span class="search-icon" id="search-bottom"></span>
+						<div class="search-result">
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			
+			
+			
+		</div>
+		
+		<script>
+			//导航滚动置顶
+			$(function(){
+				var navHeight = $('#nav-header').height();
+				$(document).scroll(function(){
+					$(window).scrollTop()>=navHeight?$('#nav-header').addClass('fixed'):$('#nav-header').removeClass('fixed');
+				})
+			})
+        </script>
+        
+        <header id="title-banner">
+            <img src="images/title-banner.png" style="width: 100%;">
+        </header>
+
+
+		
+		<div id="new_box" style="padding-bottom: 5em; ">
+			<div class="software-header">
+				<h2>赛程安排</h2>
+				<p>查看主队比赛时间和过往比赛成绩</p>
+			</div>
+            <div class="new_con">
+                <div class="newtel">
+                    <ul class="new_telst">
+                        <li class="">赛果</li>
+                        <li class="newon">预告</li>
+                        <li class="">排名</li>
+                        <p style="left: 166px;">
+                            <b></b>
+                        </p>
+                    </ul>
+                    <div class="clear">
+                    </div>
+                </div>
+                <div class="new-wrap" >
+                    <!--案例1-->
+                    <div class="new_lst" style="display: block;"> 
+						<iframe class="airtable-embed" src="https://airtable.com/embed/shrnqsNX0PCo8p9Ux?backgroundColor=redLight&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="980" style="background: transparent; border: 1px solid #ccc;"></iframe>  </div>
+                    <!--案例2-->
+                    <div class="new_lst" style="display: none;">
+                        <iframe class="airtable-embed" src="https://airtable.com/embed/shrhTHxOk005q0Akn?backgroundColor=redLight&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="980" style="background: transparent; border: 1px solid #ccc;"></iframe>  </div>
+                    <!--案例3-->
+                    <div class="new_lst" style="display: none;">
+                        <iframe class="airtable-embed" src="https://airtable.com/embed/shrCWyDXeVez4hyiU?backgroundColor=redLight&layout=card&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="980" style="background: transparent; border: 1px solid #ccc;"></iframe> </div>
+                </div>
+            </div>
+        
+        </div>
+        
+        <script type="text/javascript">           
+            $(document).ready(function(){
+                //设计案例切换
+                $('.new_telst li').mouseover(function(){
+                    var liindex = $('.new_telst li').index(this);
+                    $(this).addClass('newon').siblings().removeClass('newon');
+                    $('.new-wrap div.new_lst').eq(liindex).fadeIn(150).siblings('div.new_lst').hide();
+                    var liWidth = $('.new_telst li').width();
+                    $('.newtel .new_telst p').stop(false,true).animate({'left' : liindex * liWidth + 'px'},300);
+                });
+                 
+            });
+            </script>
+
+<footer>
+	<div class="footer" style="height: 100px;text-align:center;vertical-align:center;color: #A00B0B;padding-top: 2em;">
+		<div class="footer-top">
+		  <a href="introduction.html">数据介绍</a> |
+		  <a href="schedule.html">赛程</a> |
+		  <a href="team_gallery.html">球队</a> |
+		  <a href="statistics.html">统计</a> 
+	   </div>
+		<p>
+		 © LiveOnCBA, Inc. 2020. Welcome to the CBA community!</p>
+	  </div>
+</footer>
+    
+    </body>
+</html>

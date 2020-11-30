@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>LiveOnCBA</title>
+        <!--navbar-->
+        <link rel="stylesheet" href="css/style_navbar.css" />
+        <script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+        <!--instruction-->
+        <link href="css/style_instruction.css" rel="stylesheet" type="text/css"/>
+        <!--latestnews-->
+        <link rel="stylesheet" type="text/css" href="css/style_statistics.css">
+        <script src="js/jquery_latestnews.min.js"></script>
+		 <!--statistics-->
+		 <link rel="stylesheet" type="text/css" href="css/style_statistics.css" />
+        <!--statistics_ranking-->
+		 <link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" type="text/css" href="css/style_statistics2.css" />
+		<script type="text/javascript" src="js/jquery.min.statistics.js"></script>
+		<script type="text/javascript" src="js/zturn.js"></script>
+       
+    </head>
+
+    <body>
+        <div id="wrapper">
+
+			<div id="nav-header">
+				<div class="header">
+					<h1>
+						<a href="index.html" class="logo">
+							<img src="images/logo.png" width="100"/>
+						</a>
+					</h1>
+					<nav style="width:490px;">
+						<ul>
+							<li>
+								<a href="index.html" class="home">首页</a>
+							</li>
+							<li class="careerpath">
+								<a href="introduction.html">数据介绍</a><i class="slide-icon"></i>
+								<div class="zhiye-submenu slide-submeu">
+									<a href="introduction.html"></i>球员位置</a>
+									<a href="introduction.html">常规数据</a>	
+									<a href="introduction.html">得分数据</a>
+									<a href="introduction.html">效率数据</a>
+									<a href="introduction.html">表现数据</a>
+								</div>
+							</li>
+							<li>
+								<a href="schedule.html">赛程</a><i class="slide-icon"></i>
+								<div class="slide-submeu">
+									<a href="schedule.html">赛果</a>
+									<a href="schedule.html">赛程</a>
+									<a href="schedule.html">球队排行榜</a>
+								</div>
+							</li>
+							<li>
+								<a href="team_gallery.html">球队</a><i class="slide-icon"></i>
+								<div class="slide-submeu qy-box">
+									<a href="javascript:;">北京紫禁勇士 </a>
+									<a href="javascript:;">北京首钢</a>
+									<a href="javascript:;">福建豹发力</a>
+									<a href="javascript:;">广东东莞大益</a>
+									<a href="javascript:;">九台农商银行</a>
+									<a href="javascript:;">辽宁本钢</a>
+									<a href="javascript:;">南京同曦宙光</a>
+									<a href="javascript:;">青岛国信海天</a>
+									<a href="javascript:;">山东西王</a>
+									<a href="javascript:;">山西汾酒股份</a>
+									<a href="javascript:;">上海久事</a>
+									<a href="javascript:;">深圳马可波罗</a>
+									<a href="javascript:;">时代中国广州</a>
+									<a href="javascript:;">四川五粮金樽</a>
+									<a href="javascript:;">苏州肯帝亚</a>
+									<a href="javascript:;">天津先行者</a>
+									<a href="javascript:;">新疆伊力特</a>
+									<a href="javascript:;">浙江稠州金租</a>
+									<a href="javascript:;">浙江广厦控股</a>
+								</div>
+							</li>
+							<li>
+								<a href="statistics.html">统计</a><i class="slide-icon"></i>
+								<div class="slide-submeu">
+									<a href="statistics.html">场均数据</a>
+									<a href="statistics.html">得分</a>
+									<a href="statistics.html">篮板</a>
+									<a href="statistics.html">效率</a>
+									<a href="statistics.html">比率</a>
+									<a href="statistics.html">犯规</a>
+									<a href="statistics.html">表现</a>
+								</div>
+
+							</li>
+						</ul>
+					</nav>
+					<div class="search">
+						<input class="searchinput" id="searchinput" placeholder="搜索球队、球员" />
+						<span class="search-icon" id="search-bottom"></span>
+						<div class="search-result">
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			
+			
+			
+		</div>
+		
+		<script>
+			//导航滚动置顶
+			$(function(){
+				var navHeight = $('#nav-header').height();
+				$(document).scroll(function(){
+					$(window).scrollTop()>=navHeight?$('#nav-header').addClass('fixed'):$('#nav-header').removeClass('fixed');
+				})
+			})
+        </script>
+        
+        <header id="title-banner">
+            <img src="images/title-banner.png" style="width: 100%;">
+        </header>
+
+	<!--轮播-->
+
+	<div class="software-header" style="padding-top: 2em;">
+		<h2>球员数据排行榜</h2>
+		<p>查看每项数据表现最佳的球员</p>
+	</div>
+
+	<div class="lb_gl" style="margin: 0;padding:0;">
+		<div class="container" style="background-color: #FCEEEE;">
+			
+			<div class="pictureSlider poster-main">
+				<div class="poster-btn poster-prev-btn"></div>
+				<ul id="zturn" class="poster-list">
+					<li class="poster-item  zturn-item" >
+						<p class="xxgy">场均得分</p>
+						<p class="say">联盟平均得分：6.2</p>
+						<div class="for_btn">
+							<img src="images/bg.png" width="100%">
+						</div>
+
+						<div class="students_star">
+							<p class="cell_list"><span class="lf">山西汾酒股份<span class="darks">富兰克林</span></span> <span class="rt">后卫<span class="darks" style="color: #A00B0B;">30.6</span></span>
+							</p>
+							<p class="cell_list"><span class="lf">深圳马可波罗<span class="darks">布克</span></span> <span class="rt">后卫<span class="darks" style="color: #A00B0B;">30.0</span></span>
+							</p>
+							<p class="cell_list"><span class="lf">青岛国信海天<span class="darks">亚当斯</span></span> <span class="rt">后卫<span class="darks"style="color: #A00B0B;">28.9</span></span>
+							</p>
+							<p class="cell_list"><span class="lf">浙江广厦控股<span class="darks">孙铭徽</span></span> <span class="rt">后卫<span class="darks"style="color: #A00B0B;">28.1</span></span>
+							</p>
+						</div>
+					</li>
+
+					<li class="poster-item zturn-item">
+						<p class="xxgy">场均篮板</p>
+						<p class="say">联盟平均篮板：2.4</p>
+						<div class="for_btn">
+							<img src="images/bg.png" width="100%">
+						</div>
+
+						<div class="students_star">
+							<p class="cell_list"><span class="lf">四川五粮金樽<span class="darks">哈达迪</span></span> <span class="rt">中锋<span class="darks" style="color: #A00B0B;">17.3</span></span>
+							</p>
+							<p class="cell_list"><span class="lf">新疆伊力特<span class="darks">周琦</span></span> <span class="rt">中锋<span class="darks" style="color: #A00B0B;">13.7</span></span>
+							</p>
+							<p class="cell_list"><span class="lf">辽宁本钢<span class="darks">韩德君</span></span> <span class="rt">中锋<span class="darks"style="color: #A00B0B;">12.6</span></span>
+							</p>
+							<p class="cell_list"><span class="lf">天津先行者<span class="darks">托多罗维奇</span></span> <span class="rt">中锋<span class="darks"style="color: #A00B0B;">12.4</span></span>
+							</p>
+						</div>
+					</li>
+
+					<li class="poster-item zturn-item">
+						<p class="xxgy">场均助攻</p>
+						<p class="say">联盟平均助攻：1.3</p>
+						<div class="for_btn">
+							<img src="images/bg.png" width="100%">
+						</div>
+
+						<div class="students_star">
+							<p class="cell_list"><span class="lf">山西汾酒股份<span class="darks">富兰克林</span></span> <span class="rt">后卫<span class="darks" style="color: #A00B0B;">11.0</span></span>
+							</p>
+							<p class="cell_list"><span class="lf">四川五粮金樽<span class="darks">哈达迪</span></span> <span class="rt">中锋<span class="darks" style="color: #A00B0B;">9.5</span></span>
+							</p>
+							<p class="cell_list"><span class="lf">浙江广厦控股<span class="darks">孙铭徽</span></span> <span class="rt">后卫<span class="darks"style="color: #A00B0B;">9.3</span></span>
+							</p>
+							<p class="cell_list"><span class="lf">南京同曦宙光<span class="darks">西热力江</span></span> <span class="rt">后卫<span class="darks"style="color: #A00B0B;">9.1</span></span>
+							</p>
+						</div>
+					</li>
+
+					<li class="poster-item zturn-item" >
+						<p class="xxgy">场均抢断</p>
+						<p class="say">联盟平均抢断：0.6</p>
+						<div class="for_btn">
+							<img src="images/bg.png" width="100%">
+						</div>
+
+						<div class="students_star">
+							<p class="cell_list"><span class="lf">山东西王<span class="darks">高诗岩</span></span> <span class="rt">后卫<span class="darks" style="color: #A00B0B;">4.3</span></span>
+							</p>
+							<p class="cell_list"><span class="lf">四川五粮金樽<span class="darks">袁堂文</span></span> <span class="rt">后卫<span class="darks" style="color: #A00B0B;">3.2</span></span>
+							</p>
+							<p class="cell_list"><span class="lf">浙江广厦控股<span class="darks">赵岩昊</span></span> <span class="rt">后卫<span class="darks"style="color: #A00B0B;">3.1</span></span>
+							</p>
+							<p class="cell_list"><span class="lf">浙江广厦控股<span class="darks">孙铭徽</span></span> <span class="rt">后卫<span class="darks"style="color: #A00B0B;">3.0</span></span>
+							</p>
+						</div>
+					</li>
+
+					<li class="poster-item zturn-item">
+						<p class="xxgy">场均盖帽</p>
+						<p class="say">联盟平均盖帽：0.2</p>
+						<div class="for_btn">
+							<img src="images/bg.png" width="100%">
+						</div>
+
+						<div class="students_star">
+							<p class="cell_list"><span class="lf">新疆伊力特<span class="darks">周琦</span></span> <span class="rt">中锋<span class="darks" style="color: #A00B0B;">2.8</span></span>
+							</p>
+							<p class="cell_list"><span class="lf">深圳马可波罗<span class="darks">沈梓捷</span></span> <span class="rt">中锋<span class="darks" style="color: #A00B0B;">2.7</span></span>
+							</p>
+							<p class="cell_list"><span class="lf">北京紫禁勇士<span class="darks">孙悦</span></span> <span class="rt">后卫<span class="darks"style="color: #A00B0B;">2.3</span></span>
+							</p>
+							<p class="cell_list"><span class="lf">青岛国信海天<span class="darks">高世鳌</span></span> <span class="rt">中锋<span class="darks"style="color: #A00B0B;">1.7</span></span>
+							</p>
+						</div>
+					</li>
+	<li class="poster-item  zturn-item">
+						<p class="xxgy">三分命中率</p>
+						<p class="say">场均三分出手一个以上的球员</p>
+						<div class="for_btn">
+							<img src="images/bg.png" width="100%">
+						</div>
+
+						<div class="students_star">
+							<p class="cell_list"><span class="lf">广东东莞大益<span class="darks">胡明轩</span></span> <span class="rt">后卫<span class="darks" style="color: #A00B0B;">63.8%</span></span>
+							</p>
+							<p class="cell_list"><span class="lf">广东东莞大益<span class="darks">杜润旺</span></span> <span class="rt">前锋<span class="darks" style="color: #A00B0B;">53.1%</span></span>
+							</p>
+							<p class="cell_list"><span class="lf">广东东莞大益<span class="darks">赵睿</span></span> <span class="rt">后卫<span class="darks"style="color: #A00B0B;">52.4%</span></span>
+							</p>
+							<p class="cell_list"><span class="lf">辽宁本钢<span class="darks">吴昌泽</span></span> <span class="rt">前锋<span class="darks"style="color: #A00B0B;">51.3%</span></span>
+							</p>
+						</div>
+					</li>
+
+	<li class="poster-item zturn-item">
+						<p class="xxgy">助攻失误比</p>
+						<p class="say">考察球员传球的稳定性及助攻的成功率</p>
+						<div class="for_btn">
+							<img src="images/bg.png" width="100%">
+						</div>
+
+						<div class="students_star">
+							<p class="cell_list"><span class="lf">山东西王<span class="darks">哈德森</span></span> <span class="rt">后卫<span class="darks" style="color: #A00B0B;">6</span></span>
+							</p>
+							<p class="cell_list"><span class="lf">天津先行者<span class="darks">田野</span></span> <span class="rt">后卫<span class="darks" style="color: #A00B0B;">5.8</span></span>
+							</p>
+							<p class="cell_list"><span class="lf">南京同曦宙光<span class="darks">王子麒</span></span> <span class="rt">后卫<span class="darks"style="color: #A00B0B;">5</span></span>
+							</p>
+							<p class="cell_list"><span class="lf">南京同曦宙光<span class="darks">王梓旭</span></span> <span class="rt">前锋<span class="darks"style="color: #A00B0B;">4.7</span></span>
+							</p>
+						</div>
+					</li>
+
+	<li class="poster-item zturn-item">
+						<p class="xxgy">效率值</p>
+						<p class="say">便于比较出场时间不同的球员的表现</p>
+						<div class="for_btn">
+							<img src="images/bg.png" width="100%">
+						</div>
+
+						<div class="students_star">
+							<p class="cell_list"><span class="lf">山东西王<span class="darks">哈德森</span></span> <span class="rt">后卫<span class="darks" style="color: #A00B0B;">36.4</span></span>
+							</p>
+							<p class="cell_list"><span class="lf">广东东莞大益<span class="darks">布鲁克斯</span></span> <span class="rt">后卫<span class="darks" style="color: #A00B0B;">27.0</span></span>
+							</p>
+							<p class="cell_list"><span class="lf">青岛国信海天<span class="darks">亚当斯</span></span> <span class="rt">后卫<span class="darks"style="color: #A00B0B;">24.8</span></span>
+							</p>
+							<p class="cell_list"><span class="lf">山西汾酒股份<span class="darks">富兰克林</span></span> <span class="rt">后卫<span class="darks"style="color: #A00B0B;">24.4</span></span>
+							</p>
+						</div>
+					</li>
+
+	<li class="poster-item zturn-item">
+						<p class="xxgy">正负值</p>
+						<p class="say">球员在上场时间内球队整体比分输赢情况</p>
+						<div class="for_btn">
+							<img src="images/bg.png" width="100%">
+						</div>
+
+						<div class="students_star">
+							<p class="cell_list"><span class="lf">浙江稠州金租<span class="darks">吴前</span></span> <span class="rt">后卫<span class="darks" style="color: #A00B0B;">191</span></span>
+							</p>
+							<p class="cell_list"><span class="lf">辽宁本钢<span class="darks">韩德君</span></span> <span class="rt">中锋<span class="darks" style="color: #A00B0B;">181</span></span>
+							</p>
+							<p class="cell_list"><span class="lf">辽宁本钢<span class="darks">郭艾伦</span></span> <span class="rt">后卫<span class="darks"style="color: #A00B0B;">151</span></span>
+							</p>
+							<p class="cell_list"><span class="lf">浙江稠州金租<span class="darks">陆文博</span></span> <span class="rt">后卫<span class="darks"style="color: #A00B0B;">145</span></span>
+							</p>
+						</div>
+					</li>
+
+	<li class="poster-item zturn-item">
+						<p class="xxgy">两双</p>
+						<p class="say">得分/篮板/助攻/抢断/盖帽5项数据中有两项达到10或10以上。</p>
+						<div class="for_btn">
+							<img src="images/bg.png" width="100%">
+						</div>
+
+						<div class="students_star">
+							<p class="cell_list"><span class="lf">辽宁本钢<span class="darks">韩德君</span></span> <span class="rt">中锋<span class="darks" style="color: #A00B0B;">8</span></span>
+							</p>
+							<p class="cell_list"><span class="lf">深圳马可波罗<span class="darks">沈梓捷</span></span> <span class="rt">中锋<span class="darks" style="color: #A00B0B;">8</span></span>
+							</p>
+							<p class="cell_list"><span class="lf">新疆伊力特<span class="darks">周琦</span></span> <span class="rt">中锋<span class="darks" style="color: #A00B0B;">6</span></span>
+							</p>
+							<p class="cell_list"><span class="lf">南京同曦宙光<span class="darks">西热力江</span></span> <span class="rt">后卫<span class="darks"style="color: #A00B0B;">6</span></span>
+							</p>
+						</div>
+					</li>
+
+	<li class="poster-item zturn-item">
+						<p class="xxgy">三双</p>
+						<p class="say">得分/篮板/助攻/抢断/盖帽5项数据中有三项达到10或10以上。</p>
+						<div class="for_btn">
+							<img src="images/bg.png" width="100%">
+						</div>
+
+						<div class="students_star">
+							<p class="cell_list"><span class="lf">四川五粮金樽<span class="darks">哈达迪</span></span> <span class="rt">中锋<span class="darks" style="color: #A00B0B;">3</span></span>
+							</p>
+							<p class="cell_list"><span class="lf">山东西王<span class="darks">哈里斯</span></span> <span class="rt">后卫<span class="darks" style="color: #A00B0B;">3</span></span>
+							</p>
+							<p class="cell_list"><span class="lf">山西汾酒股份<span class="darks">富兰克林</span></span> <span class="rt">后卫<span class="darks"style="color: #A00B0B;">2</span></span>
+							</p>
+							<p class="cell_list"><span class="lf">本赛季目前仅有三位球员达到三双。<span class="darks"></span></span> 
+							</p>
+						</div>
+					</li>
+
+				</ul>
+
+			</div>
+	</div>
+			
+	</div>
+	<!--轮播-->
+					
+
+	
+	
+	
+<script type="text/javascript">
+					var aa=new zturn({
+						id:"zturn",
+						opacity:0.9,
+						width:382,
+						Awidth:1024,
+						scale:0.9
+					})
+					var ab=new zturn({
+						id:"zturn2",
+						opacity:0.8,
+						width:382,
+						Awidth:1024,
+						scale:0.6
+					})
+</script>
+		
+		<div class="card-fouth">
+
+			<div class="software-header" style="padding-top: 2em;">
+				<h2>数据统计</h2>
+				<p>查看球员本赛季详细数据</p>
+			</div>
+			
+			<div class="desc desc-list">
+		
+				<div class="industry first active">
+					<span>场均数据</span>
+				</div>
+		
+				<div class="industry">
+					<span>得分</span>
+				</div>
+		
+				<div class="industry">
+					<span>效率</span>
+				</div>
+		
+				<div class="industry">
+					<span>比率</span>
+				</div>
+		
+				<div class="industry">
+					<span>犯规</span>
+				</div>
+		
+				<div class="industry last">
+					<span>表现</span>
+				</div>
+		
+			</div>
+			<div class="case-container">
+		
+				<div class="case-panel tab-1 active">			
+						<iframe class="airtable-embed" src="https://airtable.com/embed/shrFN1U0YmBu78cGr?backgroundColor=redLight&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="1000" style="background: transparent; border: 1px solid #ccc;"></iframe>	
+				</div>
+		
+				<div class="case-panel tab-2">
+							<iframe class="airtable-embed" src="https://airtable.com/embed/shrsRHLI3aQieAD9q?backgroundColor=redLight&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="1000" style="background: transparent; border: 1px solid #ccc;"></iframe>
+				</div>
+		
+				<div class="case-panel tab-3">
+						<iframe class="airtable-embed" src="https://airtable.com/embed/shrH9zWyERnUFcBuA?backgroundColor=redLight&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="1000" style="background: transparent; border: 1px solid #ccc;"></iframe>
+				</div>
+		
+				<div class="case-panel tab-4">
+					<iframe class="airtable-embed" src="https://airtable.com/embed/shrn7ri9vZSPA2JAr?backgroundColor=redLight&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="1000" style="background: transparent; border: 1px solid #ccc;"></iframe></div>
+		
+				<div class="case-panel tab-5">	
+					<iframe class="airtable-embed" src="https://airtable.com/embed/shrGHUPcvjf27hH1S?backgroundColor=redLight&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="1000" style="background: transparent; border: 1px solid #ccc;"></iframe>
+				</div>
+		
+				<div class="case-panel tab-6">
+					<iframe class="airtable-embed" src="https://airtable.com/embed/shr4No7YN8z8nyBQv?backgroundColor=redLight&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="1000" style="background: transparent; border: 1px solid #ccc;"></iframe>
+				</div>
+		
+			</div>
+		</div>
+		
+		<script src="statics/js/jquery-1.11.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				var i = 0; //初始变量
+				var k = 0; //初始变量
+				var h = 5; //默认第一个内容条数
+				//分类tap
+				$('.industry').hover(function() {
+					i = $(this).index(); //当前索引
+					$(this).addClass('active').siblings().removeClass('active');
+					$('.case-panel').eq(i).addClass('active').siblings().removeClass('active');
+					h = $('.case-panel').eq(i).find('.image-hover').length; //获取内容条数
+				})
+				//内容tap
+				$('.case-panel .image-hover').hover(function() {
+					var j = $(this).index();
+					var src = $(this).attr('data-qrcode'); //data-qrcode属性里面是二维码的图片
+					var title = $(this).attr('data-title'); //标题
+					var desc = $(this).attr('data-desc'); //描述
+					$(this).addClass('active').siblings().removeClass('active');
+					$(this).parents('.case-panel').find('.phone-image').eq(j - 1).addClass('active').siblings().removeClass('active');
+					$(this).parents('.case-panel').find('.phone-image-cover').find('img').attr('src', src);
+					$(this).parents('.case-panel').find('.case-head').text(title);
+					$(this).parents('.case-panel').find('.case-text').text(desc);
+					
+				})
+				//图片二维码
+				$('.phone-framework').hover(function() {
+					$(this).next('.phone-image-cover').removeClass('hidden');
+				}, function() {
+					$('.phone-image-cover').addClass('hidden');
+				})
+				//自动执行,间隔5秒
+				setInterval(function() {
+					$('.case-panel').eq(i).find('.image-hover').eq(k).addClass('active').siblings().removeClass('active');
+					$('.case-panel').eq(i).find('.phone-image').eq(k).addClass('active').siblings().removeClass('active');
+					k >= h - 1 ? k = 0 : k++;
+				}, 5000)
+			})
+		</script>
+
+      <footer>
+        <div class="footer" style="height: 100px;text-align:center;vertical-align:center;color: #A00B0B;padding-top: 2em;">
+            <div class="footer-top">
+              <a href="introduction.html">数据介绍</a> |
+              <a href="schedule.html">赛程</a> |
+              <a href="team_gallery.html">球队</a> |
+              <a href="statistics.html">统计</a> 
+           </div>
+            <p>
+             © LiveOnCBA, Inc. 2020. Welcome to the CBA community!</p>
+          </div>
+    </footer>
+    
+    </body>
+</html>

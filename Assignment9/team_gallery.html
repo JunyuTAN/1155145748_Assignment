@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>LiveOnCBA</title>
+        <!--navbar-->
+        <link rel="stylesheet" href="css/style_navbar.css" />
+        <script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+        <!--instruction-->
+        <link href="css/style_instruction.css" rel="stylesheet" type="text/css"/>
+        <!--latestnews-->
+        <link rel="stylesheet" type="text/css" href="css/style_latestnews.css">
+        <script src="js/jquery_latestnews.min.js"></script>
+         <!--team gallery-->
+       
+    </head>
+
+    <body>
+        <div id="wrapper">
+
+			<div id="nav-header">
+				<div class="header">
+					<h1>
+						<a href="javascript:;" class="logo">
+							<img src="images/logo.png" width="100"/>
+						</a>
+					</h1>
+					<nav style="width:490px;">
+						<ul>
+							<li>
+								<a href="index.html" class="home">首页</a>
+							</li>
+							<li class="careerpath">
+								<a href="introduction.html">数据介绍</a><i class="slide-icon"></i>
+								<div class="zhiye-submenu slide-submeu">
+									<a href="introduction.html"></i>球员位置</a>
+									<a href="introduction.html">常规数据</a>	
+									<a href="introduction.html">得分数据</a>
+									<a href="introduction.html">效率数据</a>
+									<a href="introduction.html">表现数据</a>
+								</div>
+							</li>
+							<li>
+								<a href="schedule.html">赛程</a><i class="slide-icon"></i>
+								<div class="slide-submeu">
+									<a href="schedule.html">赛果</a>
+									<a href="schedule.html">赛程</a>
+									<a href="schedule.html">球队排行榜</a>
+								</div>
+							</li>
+							<li>
+								<a href="team_gallery.html">球队</a><i class="slide-icon"></i>
+								<div class="slide-submeu qy-box">
+									<a href="javascript:;">北京紫禁勇士 </a>
+									<a href="javascript:;">北京首钢</a>
+									<a href="javascript:;">福建豹发力</a>
+									<a href="javascript:;">广东东莞大益</a>
+									<a href="javascript:;">九台农商银行</a>
+									<a href="javascript:;">辽宁本钢</a>
+									<a href="javascript:;">南京同曦宙光</a>
+									<a href="javascript:;">青岛国信海天</a>
+									<a href="javascript:;">山东西王</a>
+									<a href="javascript:;">山西汾酒股份</a>
+									<a href="javascript:;">上海久事</a>
+									<a href="javascript:;">深圳马可波罗</a>
+									<a href="javascript:;">时代中国广州</a>
+									<a href="javascript:;">四川五粮金樽</a>
+									<a href="javascript:;">苏州肯帝亚</a>
+									<a href="javascript:;">天津先行者</a>
+									<a href="javascript:;">新疆伊力特</a>
+									<a href="javascript:;">浙江稠州金租</a>
+									<a href="javascript:;">浙江广厦控股</a>
+								</div>
+							</li>
+							<li>
+								<a href="statistics.html">统计</a><i class="slide-icon"></i>
+								<div class="slide-submeu">
+									<a href="statistics.html">场均数据</a>
+									<a href="statistics.html">得分</a>
+									<a href="statistics.html">篮板</a>
+									<a href="statistics.html">效率</a>
+									<a href="statistics.html">比率</a>
+									<a href="statistics.html">犯规</a>
+									<a href="statistics.html">表现</a>
+								</div>
+
+							</li>
+						</ul>
+					</nav>
+					<div class="search">
+						<input class="searchinput" id="searchinput" placeholder="搜索球队、球员" />
+						<span class="search-icon" id="search-bottom"></span>
+						<div class="search-result">
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			
+			
+			
+		</div>
+		
+		<script>
+			//导航滚动置顶
+			$(function(){
+				var navHeight = $('#nav-header').height();
+				$(document).scroll(function(){
+					$(window).scrollTop()>=navHeight?$('#nav-header').addClass('fixed'):$('#nav-header').removeClass('fixed');
+				})
+			})
+        </script>
+        
+        <header id="title-banner">
+            <img src="images/title-banner.png" style="width: 100%;">
+        </header>
+
+        <div class="software-header">
+            <h2>球队巡礼</h2>
+			<p><a href="">北控</a> | <a href="">北京</a> | <a href="">福建</a> | <a href="">广东</a> | <a href="">吉林</a> | <a href="">辽宁</a> | <a href="">南京</a> | <a href="">青岛</a> | <a href="">山东</a> | <a href="">山西</a> | <a href="">上海</a> | <a href="">深圳</a> | <a href="">广州</a> | <a href="">四川</a> | <a href="">江苏</a> | <a href="">天津</a> | <a href="">新疆</a> | <a href="">浙江</a> | <a href="">广厦</a>
+			</p>
+        </div>
+
+        <iframe class="airtable-embed" src="https://airtable.com/embed/shrkXxgZ4NLMA7Ww2?backgroundColor=redLight&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="1000" style="background: transparent; border: 1px solid #ccc;"></iframe>
+		<footer>
+			<div class="footer" style="height: 100px;text-align:center;vertical-align:center;color: #A00B0B;padding-top: 2em;">
+				<div class="footer-top">
+				  <a href="introduction.html">数据介绍</a> |
+				  <a href="schedule.html">赛程</a> |
+				  <a href="team_gallery.html">球队</a> |
+				  <a href="statistics.html">统计</a> 
+			   </div>
+				<p>
+				 © LiveOnCBA, Inc. 2020. Welcome to the CBA community!</p>
+			  </div>
+		</footer>
+    
+    </body>
+</html>
