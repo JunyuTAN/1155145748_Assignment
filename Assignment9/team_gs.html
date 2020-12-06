@@ -1,0 +1,655 @@
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>LiveOnCBA</title>
+        <!--navbar-->
+        <link rel="stylesheet" href="css/style_navbar.css" />
+        <script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+        <!--instruction-->
+        <link href="css/style_instruction.css" rel="stylesheet" type="text/css"/>
+        <!--latestnews-->
+        <link rel="stylesheet" type="text/css" href="css/style_schedule.css">
+        <script src="js/jquery_latestnews.min.js"></script>
+		 <!--team switch-->
+		 <link type="text/css" rel="stylesheet" href="css/style_team.css">
+		 <script type="text/javascript" src="js/jquery_team.js"></script>
+       
+    </head>
+
+    <body>
+        <div id="wrapper">
+
+			<div id="nav-header">
+				<div class="header">
+					<h1>
+						<a href="javascript:;" class="logo">
+							<img src="images/logo.png" width="100"/>
+						</a>
+					</h1>
+					<nav style="width:490px;">
+						<ul>
+							<li>
+								<a href="index.html" class="home">首页</a>
+							</li>
+							<li class="careerpath">
+								<a href="introduction.html">数据介绍</a><i class="slide-icon"></i>
+								<div class="zhiye-submenu slide-submeu">
+									<a href="introduction.html"></i>球员位置</a>
+									<a href="introduction.html">常规数据</a>	
+									<a href="introduction.html">得分数据</a>
+									<a href="introduction.html">效率数据</a>
+									<a href="introduction.html">表现数据</a>
+								</div>
+							</li>
+							<li>
+								<a href="schedule.html">赛程</a><i class="slide-icon"></i>
+								<div class="slide-submeu">
+									<a href="schedule.html">赛果</a>
+									<a href="schedule.html">赛程</a>
+									<a href="schedule.html">球队排行榜</a>
+								</div>
+							</li>
+							<li>
+								<a href="team_gallery.html">球队</a><i class="slide-icon"></i>
+								<div class="slide-submeu qy-box">
+									<a href="team_bk.html">北京紫禁勇士 </a>
+									<a href="team_bj.html">北京首钢</a>
+									<a href="team_fj.html">福建豹发力</a>
+									<a href="team_gd.html">广东东莞大益</a>
+									<a href="team_jl.html">九台农商银行</a>
+									<a href="team_bg.html">辽宁本钢</a>
+									<a href="team_nj.html">南京同曦宙光</a>
+									<a href="team_qd.html">青岛国信海天</a>
+									<a href="team_sd.html">山东西王</a>
+									<a href="team_sx.html">山西汾酒股份</a>
+									<a href="team_sh.html">上海久事</a>
+									<a href="team_sz.html">深圳马可波罗</a>
+									<a href="team_gz.html">时代中国广州</a>
+									<a href="team_sc.html">四川五粮金樽</a>
+									<a href="team_js.html">苏州肯帝亚</a>
+									<a href="team_tj.html">天津先行者</a>
+									<a href="team_xj.html">新疆伊力特</a>
+									<a href="team_cz.html">浙江稠州金租</a>
+									<a href="team_gs.html">浙江广厦控股</a>
+								</div>
+							</li>
+							<li>
+								<a href="statistics.html">统计</a><i class="slide-icon"></i>
+								<div class="slide-submeu">
+									<a href="statistics.html">场均数据</a>
+									<a href="statistics.html">得分</a>
+									<a href="statistics.html">篮板</a>
+									<a href="statistics.html">效率</a>
+									<a href="statistics.html">比率</a>
+									<a href="statistics.html">犯规</a>
+									<a href="statistics.html">表现</a>
+								</div>
+
+							</li>
+						</ul>
+					</nav>
+					<div class="search">
+						<input class="searchinput" id="searchinput" placeholder="搜索球队、球员" />
+						<span class="search-icon" id="search-bottom"></span>
+						<div class="search-result">
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			
+			
+			
+		</div>
+		
+		<script>
+			//导航滚动置顶
+			$(function(){
+				var navHeight = $('#nav-header').height();
+				$(document).scroll(function(){
+					$(window).scrollTop()>=navHeight?$('#nav-header').addClass('fixed'):$('#nav-header').removeClass('fixed');
+				})
+			})
+        </script>
+        
+        <header id="title-banner">
+            <img src="images/title-banner.png" style="width: 100%;">
+        </header>
+
+
+		
+		<div id="new_box" style="padding-bottom: 5em; ">
+			<div class="software-header">
+				<div id="team_title_box" style="width: auto;height: 200px;">
+				<img src="https://image.cbaleague.com/cbaleague/teamlogo/300x300/29128_300.png" style="float: left;width: 200px;">
+				<h2>浙江广厦控股 | 浙江广厦猛狮俱乐部</h2>
+				<p>主教练：李春江</p>
+				<p>所在城市：诸暨</p>
+				<p>创建时间：2005</p>
+				<p>球队最佳成绩：2017-18赛季CBA亚军</p>
+				<p>知名球员：威尔森·钱德勒、皮特·拉莫斯、林志杰、德维恩·琼斯等</p>
+			    </div>
+			</div>
+
+        <div id="switch_box" style="padding-bottom:5em;">
+			<div class="like-content">
+				<div class="clearfix">
+					<div class="like-fl">
+						<img src="images/like-bg.png" alt="">
+					</div>
+					<div class="guess-box">
+						<ul>
+							<li class="guess-item">
+								<a href="javascript:;">
+									<p class="guess-item-text">孙铭徽</p>
+									<p class="clearfix guess-mba">
+										<span class="icon-add"></span>
+										<span class="icon-til">17号/控球后卫</span>
+									</p>
+									<p class="clearfix">
+										<span class="icon-time"></span>
+										<span class="icon-til">出战10场/上场时间42min</span>
+									</p>
+									<p class="price">场均得分27.3</p>
+								</a>
+							</li>
+	
+							<li class="guess-item">
+								<a href="javascript:;">
+									<p class="guess-item-text">胡金秋</p>
+									<p class="clearfix guess-mba">
+										<span class="icon-add"></span>
+										<span class="icon-til">21号/中锋</span>
+									</p>
+									<p class="clearfix">
+										<span class="icon-time"></span>
+										<span class="icon-til">出战12场/上场时间37min</span>
+									</p>
+									<p class="price">投篮命中率65.4%</p>
+								</a>
+							</li>
+	
+							<li class="guess-item">
+								<a href="javascript:;">
+									<p class="guess-item-text">钱德勒</p>
+									<p class="clearfix guess-mba">
+										<span class="icon-add"></span>
+										<span class="icon-til">50号/小前锋</span>
+									</p>
+									<p class="clearfix">
+										<span class="icon-time"></span>
+										<span class="icon-til">出战2场/上场时间21min</span>
+									</p>
+									<p class="price">三分命中率50.0%</p>
+								</a>
+							</li>
+	
+							<li class="guess-item">
+								<a href="javascript:;">
+									<p class="guess-item-text">赵嘉仁</p>
+									<p class="clearfix guess-mba">
+										<span class="icon-add"></span>
+										<span class="icon-til">32号/大前锋</span>
+									</p>
+									<p class="clearfix">
+										<span class="icon-time"></span>
+										<span class="icon-til">出战9场/上场时间14min</span>
+									</p>
+									<p class="price">罚球命中率100.0%</p>
+								</a>
+							</li>
+	
+						   
+							<li class="guess-item">
+								<a href="javascript:;">
+									<p class="guess-item-text">胡金秋</p>
+									<p class="clearfix guess-mba">
+										<span class="icon-add"></span>
+										<span class="icon-til">21号/中锋</span>
+									</p>
+									<p class="clearfix">
+										<span class="icon-time"></span>
+										<span class="icon-til">出战12场/上场时间37min</span>
+									</p>
+									<p class="price">场均篮板10.6</p>
+								</a>
+							</li>
+
+							<li class="guess-item">
+								<a href="javascript:;">
+									<p class="guess-item-text">胡金秋</p>
+									<p class="clearfix guess-mba">
+										<span class="icon-add"></span>
+										<span class="icon-til">21号/中锋</span>
+									</p>
+									<p class="clearfix">
+										<span class="icon-time"></span>
+										<span class="icon-til">出战12场/上场时间37min</span>
+									</p>	
+									<p class="price">进攻篮板4.0</p>
+								</a>
+							</li>
+	
+							<li class="guess-item">
+								<a href="javascript:;">
+									<p class="guess-item-text">拉杜利察</p>
+									<p class="clearfix guess-mba">
+										<span class="icon-add"></span>
+										<span class="icon-til">15号/中锋</span>
+									</p>
+									<p class="clearfix">
+										<span class="icon-time"></span>
+										<span class="icon-til">出战10场/上场时间31min</span>
+									</p>
+									<p class="price">防守篮板7.0</p>
+								</a>
+							</li>
+						   
+							<li class="guess-item">
+								<a href="javascript:;">
+									<p class="guess-item-text">孙铭徽</p>
+									<p class="clearfix guess-mba">
+										<span class="icon-add"></span>
+										<span class="icon-til">17号/控球后卫</span>
+									</p>
+									<p class="clearfix">
+										<span class="icon-time"></span>
+										<span class="icon-til">出战10场/上场时间42min</span>
+									</p>
+									<p class="price">场均助攻9.7</p>
+								</a>
+							</li>
+	
+							<li class="guess-item">
+								<a href="javascript:;">
+									<p class="guess-item-text">赵岩昊</p>
+									<p class="clearfix guess-mba">
+										<span class="icon-add"></span>
+										<span class="icon-til">25号/得分后卫</span>
+									</p>
+									<p class="clearfix">
+										<span class="icon-time"></span>
+										<span class="icon-til">出战9场/上场时间33min</span>
+									</p>
+									<p class="price">场均抢断2.8</p>
+								</a>
+							</li>
+						  
+							<li class="guess-item">
+								<a href="javascript:;">
+									<p class="guess-item-text">胡金秋</p>
+									<p class="clearfix guess-mba">
+										<span class="icon-add"></span>
+										<span class="icon-til">21号/中锋</span>
+									</p>
+									<p class="clearfix">
+										<span class="icon-time"></span>
+										<span class="icon-til">出战12场/上场时间37min</span>
+									</p>
+									<p class="price">场均盖帽1.7</p>
+								</a>
+							</li>
+	
+							<li class="guess-item">
+								<a href="javascript:;">
+									<p class="guess-item-text">孙铭徽</p>
+									<p class="clearfix guess-mba">
+										<span class="icon-add"></span>
+										<span class="icon-til">17号/控球后卫</span>
+									</p>
+									<p class="clearfix">
+										<span class="icon-time"></span>
+										<span class="icon-til">出战10场/上场时间42min</span>
+									</p>
+									<p class="price">场均失误4.9</p>
+								</a>
+							</li>
+
+							<li class="guess-item">
+								<a href="javascript:;">
+									<p class="guess-item-text">拉杜利察</p>
+									<p class="clearfix guess-mba">
+										<span class="icon-add"></span>
+										<span class="icon-til">15号/中锋</span>
+									</p>
+									<p class="clearfix">
+										<span class="icon-time"></span>
+										<span class="icon-til">出战10场/上场时间31min</span>
+									</p>
+									<p class="price">场均犯规3.8</p>
+								</a>
+							</li>
+	
+							<li class="guess-item">
+								<a href="javascript:;">
+									<p class="guess-item-text">拉杜利察</p>
+									<p class="clearfix guess-mba">
+										<span class="icon-add"></span>
+										<span class="icon-til">15号/中锋</span>
+									</p>
+									<p class="clearfix">
+										<span class="icon-time"></span>
+										<span class="icon-til">出战10场/上场时间31min</span>
+									</p>
+									<p class="price">场均被侵6.1次</p>
+								</a>
+							</li>
+	
+							<li class="guess-item">
+								<a href="javascript:;">
+									<p class="guess-item-text">钱德勒</p>
+									<p class="clearfix guess-mba">
+										<span class="icon-add"></span>
+										<span class="icon-til">50号/小前锋</span>
+									</p>
+									<p class="clearfix">
+										<span class="icon-time"></span>
+										<span class="icon-til">出战2场/上场时间21min</span>
+									</p>
+									<p class="price">效率值24.1</p>
+								</a>
+							</li>
+	
+							<li class="guess-item">
+								<a href="javascript:;">
+									<p class="guess-item-text">胡金秋</p>
+									<p class="clearfix guess-mba">
+										<span class="icon-add"></span>
+										<span class="icon-til">21号/中锋</span>
+									</p>
+									<p class="clearfix">
+										<span class="icon-time"></span>
+										<span class="icon-til">出战12场/上场时间37min</span>
+									</p>
+									<p class="price">进攻效率139.6</p>
+								</a>
+							</li>
+	
+							<li class="guess-item">
+								<a href="javascript:;">
+									<p class="guess-item-text">赵嘉仁</p>
+									<p class="clearfix guess-mba">
+										<span class="icon-add"></span>
+										<span class="icon-til">32号/大前锋</span>
+									</p>
+									<p class="clearfix">
+										<span class="icon-time"></span>
+										<span class="icon-til">出战9场/上场时间14min</span>
+									</p>
+									<p class="price">防守效率118.5</p>
+								</a>
+							</li>
+	
+							<li class="guess-item">
+								<a href="javascript:;">
+									<p class="guess-item-text">冯欣</p>
+									<p class="clearfix guess-mba">
+										<span class="icon-add"></span>
+										<span class="icon-til">33号/控球后卫</span>
+									</p>
+									<p class="clearfix">
+										<span class="icon-time"></span>
+										<span class="icon-til">出战11场/上场时间23min</span>
+									</p>
+									<p class="price">助攻失误比2.7</p>
+								</a>
+							</li>
+	
+							<li class="guess-item">
+								<a href="javascript:;">
+									<p class="guess-item-text">钱德勒</p>
+									<p class="clearfix guess-mba">
+										<span class="icon-add"></span>
+										<span class="icon-til">50号/小前锋</span>
+									</p>
+									<p class="clearfix">
+										<span class="icon-time"></span>
+										<span class="icon-til">出战2场/上场时间21min</span>
+									</p>
+									<p class="price">使用率33.8%</p>
+								</a>
+							</li>
+	
+							<li class="guess-item">
+								<a href="javascript:;">
+									<p class="guess-item-text">胡金秋</p>
+									<p class="clearfix guess-mba">
+										<span class="icon-add"></span>
+										<span class="icon-til">21号/中锋</span>
+									</p>
+									<p class="clearfix">
+										<span class="icon-time"></span>
+										<span class="icon-til">出战12场/上场时间37min</span>
+									</p>
+									<p class="price">正负值91</p>
+								</a>
+							</li>
+	
+							<li class="guess-item">
+								<a href="javascript:;">
+									<p class="guess-item-text">胡金秋</p>
+									<p class="clearfix guess-mba">
+										<span class="icon-add"></span>
+										<span class="icon-til">21号/中锋</span>
+									</p>
+									<p class="clearfix">
+										<span class="icon-time"></span>
+										<span class="icon-til">出战12场/上场时间37min</span>
+									</p>
+									<p class="price">真实命中率71.8%</p>
+								</a>
+							</li>
+	
+							<li class="guess-item">
+								<a href="javascript:;">
+									<p class="guess-item-text">胡金秋</p>
+									<p class="clearfix guess-mba">
+										<span class="icon-add"></span>
+										<span class="icon-til">21号/中锋</span>
+									</p>
+									<p class="clearfix">
+										<span class="icon-time"></span>
+										<span class="icon-til">出战12场/上场时间37min</span>
+									</p>
+									<p class="price">有效命中率66.4%</p>
+								</a>
+							</li>
+							<li class="guess-item">
+								<a href="javascript:;">
+									<p class="guess-item-text">胡金秋</p>
+									<p class="clearfix guess-mba">
+										<span class="icon-add"></span>
+										<span class="icon-til">21号/中锋</span>
+									</p>
+									<p class="clearfix">
+										<span class="icon-time"></span>
+										<span class="icon-til">出战12场/上场时间37min</span>
+									</p>
+									<p class="price">达成两双8次</p>
+								</a>
+							</li>
+
+							<li class="guess-item">
+								<a href="javascript:;">
+									<p class="guess-item-text">孙铭徽</p>
+									<p class="clearfix guess-mba">
+										<span class="icon-add"></span>
+										<span class="icon-til">17号/控球后卫</span>
+									</p>
+									<p class="clearfix">
+										<span class="icon-time"></span>
+										<span class="icon-til">出战10场/上场时间42min</span>
+									</p>
+									<p class="price">达成两双6次</p>
+								</a>
+							</li>
+	
+							<li class="guess-item">
+								<a href="javascript:;">
+									<p class="guess-item-text">拉杜利察</p>
+									<p class="clearfix guess-mba">
+										<span class="icon-add"></span>
+										<span class="icon-til">15号/中锋</span>
+									</p>
+									<p class="clearfix">
+										<span class="icon-time"></span>
+										<span class="icon-til">出战10场/上场时间31min</span>
+									</p>
+									<p class="price">达成两双4次</p>
+								</a>
+							</li>
+
+							<li class="guess-item">
+								<a href="javascript:;">
+									<p class="guess-item-text">冯欣</p>
+									<p class="clearfix guess-mba">
+										<span class="icon-add"></span>
+										<span class="icon-til">33号/控球后卫</span>
+									</p>
+									<p class="clearfix">
+										<span class="icon-time"></span>
+										<span class="icon-til">出战11场/上场时间23min</span>
+									</p>
+									<p class="price">达成两双1次</p>
+								</a>
+							</li>
+							<li class="guess-item">
+								<a href="javascript:;">
+									<p class="guess-item-text">赵嘉仁</p>
+									<p class="clearfix guess-mba">
+										<span class="icon-add"></span>
+										<span class="icon-til">32号/大前锋</span>
+									</p>
+									<p class="clearfix">
+										<span class="icon-time"></span>
+										<span class="icon-til">出战9场/上场时间14min</span>
+									</p>
+									<p class="price">达成两双1次</p>
+								</a>
+							</li>
+							<li class="guess-item">
+								<a href="javascript:;">
+									<p class="guess-item-text">李金效</p>
+									<p class="clearfix guess-mba">
+										<span class="icon-add"></span>
+										<span class="icon-til">13号/大前锋/中锋</span>
+									</p>
+									<p class="clearfix">
+										<span class="icon-time"></span>
+										<span class="icon-til">出战12场/上场时间14min</span>
+									</p>
+									<p class="price">达成两双1次</p>
+								</a>
+							</li>
+							<li class="guess-item">
+								<a href="javascript:;">
+									<p class="guess-item-text">钱德勒</p>
+									<p class="clearfix guess-mba">
+										<span class="icon-add"></span>
+										<span class="icon-til">50号/小前锋</span>
+									</p>
+									<p class="clearfix">
+										<span class="icon-time"></span>
+										<span class="icon-til">出战2场/上场时间21min</span>
+									</p>
+									<p class="price">达成两双1次</p>
+								</a>
+							</li>
+	
+	
+						</ul>
+						<div class="guess-switch">
+							<a href="javascript:void(0)">
+								<span class="switch">换一批</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+	
+			<script type="text/javascript">
+	
+				var changeindex=1;
+				var clickindex=2;
+				$(".guess-box li").each(function(index,element){
+					if(index/8<changeindex){
+	
+						element.className="change"+changeindex;
+					}else{
+						changeindex++;
+						element.className="change"+changeindex;
+					}
+				})
+				$(".change1").siblings().css("display","none");
+				$(".change1").show();
+				$(".switch").click(function(){
+					if(clickindex<=changeindex){
+						$(".change"+clickindex).siblings().css("display","none");
+						$(".change"+clickindex).show();
+						clickindex++;
+					}else{
+						clickindex=1;
+						$(".change"+clickindex).siblings().css("display","none");
+						$(".change"+clickindex).show();
+					}
+	
+				});
+			</script>
+	
+		</div>
+
+            <div class="new_con">
+                <div class="newtel">
+                    <ul class="new_telst">
+                        <li class="">球员信息</li>
+                        <li class="newon">球员数据</li>
+                        <li class="">球队本赛季统计</li>
+                        <p style="left: 166px;">
+                            <b></b>
+                        </p>
+                    </ul>
+                    <div class="clear">
+                    </div>
+                </div>
+                <div class="new-wrap" style="height: 800px;" >
+                    <!--案例1-->
+                    <div class="new_lst" style="display: none;"> 
+						<iframe class="airtable-embed" src="https://airtable.com/embed/shrHBHle1mVkTcSy9?backgroundColor=redLight&layout=card&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="750" style="background: transparent; border: 1px solid #ccc;"></iframe></div> <!--案例2-->
+                    <div class="new_lst" style="display: block;">
+                        <iframe class="airtable-embed" src="https://airtable.com/embed/shr6FJkIdxPZNnHd6?backgroundColor=redLight&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="750" style="background: transparent; border: 1px solid #ccc;"></iframe> </div>            <!--案例3-->
+                    <div class="new_lst" style="display: none;">
+                        <iframe class="airtable-embed" src="https://airtable.com/embed/shrGaTRuq3Qsnpau6?backgroundColor=redLight&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="750" style="background: transparent; border: 1px solid #ccc;"></iframe></div>
+            </div>
+        
+        </div>
+        
+        <script type="text/javascript">           
+            $(document).ready(function(){
+                //设计案例切换
+                $('.new_telst li').mouseover(function(){
+                    var liindex = $('.new_telst li').index(this);
+                    $(this).addClass('newon').siblings().removeClass('newon');
+                    $('.new-wrap div.new_lst').eq(liindex).fadeIn(150).siblings('div.new_lst').hide();
+                    var liWidth = $('.new_telst li').width();
+                    $('.newtel .new_telst p').stop(false,true).animate({'left' : liindex * liWidth + 'px'},300);
+                });
+                 
+            });
+            </script>
+
+<footer>
+	<div class="footer" style="height: 100px;text-align:center;vertical-align:center;color: #A00B0B;padding-top: 2em;">
+		<div class="footer-top">
+		  <a href="introduction.html">数据介绍</a> |
+		  <a href="schedule.html">赛程</a> |
+		  <a href="team_gallery.html">球队</a> |
+		  <a href="statistics.html">统计</a> 
+	   </div>
+		<p>
+		 © LiveOnCBA, Inc. 2020. Welcome to the CBA community!</p>
+	  </div>
+</footer>
+    
+    </body>
+</html>
