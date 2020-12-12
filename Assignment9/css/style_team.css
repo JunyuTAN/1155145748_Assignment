@@ -89,7 +89,7 @@ a:hover {
     width: 1022px;
     height: 352px;
     overflow: hidden;
-    background-color: #fdeded;
+    background-color: #C7284D;
     position: relative;
     top: 1px;
     padding-top: 22px;
@@ -114,7 +114,7 @@ a:hover {
 
 .switch {
     text-align: center;
-    color: #A00B08;
+    color: #dbdbdb;
     font-size: 14px;
     font-weight: bold;
 }
@@ -150,7 +150,7 @@ a:hover {
 }
 
 .guess-item-text:hover {
-    color:  #A00B0B;
+    color:  #C7284D;
 }
 
 .icon-add {
@@ -181,7 +181,7 @@ a:hover {
 }
 
 .price {
-    color: #A00B0B;
+    color: #C7284D;
     font-size: 19px;
     margin-top: 10px;
     font-family: "Microsoft YaHei";
