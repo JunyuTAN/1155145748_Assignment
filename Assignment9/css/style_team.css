@@ -71,12 +71,12 @@ a:hover {
     visibility: hidden;
 }
 
-.clearfix {
-}
+
 
 /* 必要布局样式css */
 .like-content {
     width: 1200px;
+    display: flex;
     margin: 0 auto;
 }
 
@@ -190,3 +190,5 @@ a:hover {
 .guess-mba {
     margin-bottom: 10px;
 }
+
+

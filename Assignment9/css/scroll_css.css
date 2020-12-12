@@ -1,0 +1,111 @@
+/*num-figure*/
+.num-figure {
+    width: 100%;
+    height: auto;
+    text-align: center;
+
+}
+.num-figure li{ list-style:none;}
+.OEM-ico {
+    padding: 23px 0;
+	width:16.66%;
+	float:left;
+}
+.num-change{padding:0;}
+.num-change li:first-child {
+    width: 55px;
+    height: 50px;
+    margin: 0 auto;
+}
+
+.num-figure .Trusted {
+    background: url("../images/ranking.png") no-repeat 0px 6px;
+    background-size: 55px;
+}
+
+.num-figure .WeSold {
+    background: url("../images/winrate.png") no-repeat;
+    background-size: 55px;
+}
+.num-figure .Employees {
+    background: url("../images/score.png") no-repeat 0px 2px;
+    background-size: 55px;
+}
+
+.num-figure .Available {
+    background: url("../images/win.png") no-repeat;
+    background-size: 55px;
+}
+
+.num-figure .Shopping {
+    background: url("../images/lose.png") no-repeat;
+    background-size: 45px;
+}
+
+.num-figure .Employees {
+    background: url("../images/score.png") no-repeat 0px 2px;
+    background-size: 55px;
+}
+
+.num-figure .margin {
+    background: url("../images/margin.png") no-repeat 0px 2px;
+    background-size: 50px;
+}
+
+
+
+.OEM-ico a{
+    text-decoration: none;
+}
+
+.num-change li:nth-child(2) {
+    font-size: 18px;
+    font-family: YeSans;
+    color: #444;
+    font-weight: 600;
+}
+
+.num-change li:nth-child(3) {
+    color: #9C9C9C;
+    font-size: 13px;
+    margin-top: 2px;
+}
+
+.OEM-ico:hover {
+    background:#FED700;
+}
+
+.OEM-ico:hover .num-change li:nth-child(3),
+.OEM-ico:hover .num-change li:nth-child(2) {
+}
+
+.OEM-ico:hover .WeSold {
+    background-position: 0px 7px;
+    transition: all 0.3s;
+}
+
+.OEM-ico:hover .Available {
+    background-position:0px 7px;
+    transition: all 0.3s;
+}
+
+.OEM-ico:hover .Shopping {
+    background-position: 0px 7px;
+    transition: all 0.3s;
+}
+
+.OEM-ico:hover .Employees {
+    background-position: 0px 7px;
+    transition: all 0.3s;
+}
+
+.OEM-ico:hover .Trusted {
+    background-position: 0px 15px;
+    transition: all 0.3s;
+}
+
+.OEM-ico:hover .margin {
+    background-position: 0px 15px;
+    transition: all 0.3s;
+}
+
